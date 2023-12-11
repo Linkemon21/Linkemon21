@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+
+/**
+ *
+ * @author AnStL5563
+ */
+public class ctc {
+
+
+  public static void main(String[] args) 
+  {
+    /* Write your code here */
+    Scanner scan = new Scanner(System.in);
+    
+    
+    System.out.println("Welcome. What is your name?");
+    String peter = scan.nextLine();
+    System.out.println("Hello " + peter + ". Are you ready to crack the code?");
+    String yes = scan.nextLine();
+    
+    
+    if (yes.equalsIgnoreCase("yes")){
+      System.out.println("\nPHASE 1");
+      System.out.println("Enter a string:");
+      String abc = scan.nextLine();
+       if (!(abc.length() == 3)){
+      System.out.println("Sorry, that was incorrect!");
+      System.out.println("Better luck next time!");
+      } else {
+        System.out.println("Correct!");
+        System.out.println("\nPHASE 2");
+        
+        System.out.println("Enter a number:");
+        int number1 = scan.nextInt();
+        if (!(number1 == 19 || number1 >= 35 && number1 < 78)){
+          System.out.println("Sorry, that was incorrect! \nBetter luck next time!");
+          } else {
+            System.out.println("Correct!");
+            
+            System.out.println("\nPHASE 3");
+            System.out.println("Enter a number");
+            int number2 = scan.nextInt();
+            if (!(number2 > 0 && (number2 %2 == 0) || (number2 %10 == 1))){
+              System.out.println("Sorry, that was incorrect!");
+              System.out.println("Better luck next time!");
+            } else {
+              System.out.println("Correct!\nYou have cracked the code!");
+            }
+          }
+            }
+    }
+  }
+}
